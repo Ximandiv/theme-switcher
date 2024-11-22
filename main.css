@@ -36,6 +36,7 @@ li{
     width: 50px;
     border-radius: 50%;
     border: none;
+    cursor: pointer;
     color: var(--btnFontColor);
     background-color: var(--btnBg);
 }
