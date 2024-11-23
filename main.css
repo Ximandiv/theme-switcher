@@ -6,14 +6,17 @@
 :root {
     --grey: #E5E3D4;
     --beige: #ECDFCC;
+    --darkBeige: #a09175;
     --darkBrown: #1E201E;
     --navy: #1C325B;
+    --darkNavy: rgb(31, 78, 165);
 }
 
 body{
     background: var(--bg);
     color: var(--fontColor);
     font-family: helvetica;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 li{
@@ -39,12 +42,20 @@ li{
     cursor: pointer;
     color: var(--btnFontColor);
     background-color: var(--btnBg);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.btn:hover{
+    background-color: var(--btnDarkBg);
+    transform: scale(0.8);
 }
 
 .light-theme{
     --bg: var(--grey);
     --fontColor: var(--navy);
     --btnBg: var(--navy);
+    --btnDarkBg: var(--darkNavy);
     --btnFontColor: var(--beige);
 }
 
@@ -52,5 +63,6 @@ li{
     --bg: var(--darkBrown);
     --fontColor: var(--beige);
     --btnBg: var(--beige);
+    --btnDarkBg: var(--darkBeige);
     --btnFontColor: var(--navy);
 }
